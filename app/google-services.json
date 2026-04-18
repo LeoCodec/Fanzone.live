@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "844546429283",
+    "project_id": "fanzonelive-dc83c",
+    "storage_bucket": "fanzonelive-dc83c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844546429283:android:631f9621626c5d92560356",
+        "android_client_info": {
+          "package_name": "com.example.fanzonelive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqEl_73DXonsELeezrKIwaSfqmm44ahQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

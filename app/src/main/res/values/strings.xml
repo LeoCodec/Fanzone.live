@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FanZone Live</string>
+    <string-array name="sports_array">
+        <item>Fútbol</item>
+        <item>Basket</item>
+        <item>F1</item>
+        <item>Box</item>
+        <item>UFC</item>
+        <item>Béisbol</item>
+        <item>Mundial</item>
+        <item>Otro</item>
+    </string-array>
+</resources>

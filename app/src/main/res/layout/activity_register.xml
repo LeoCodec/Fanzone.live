@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:padding="32dp" android:background="#121212">
+
+    <TextView android:text="Crear cuenta"
+        android:textSize="26sp" android:textColor="#FFFFFF"
+        android:textStyle="bold" android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <EditText android:id="@+id/etEmail"
+        android:hint="Correo electrónico" android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF" android:textColorHint="#888888"
+        android:background="@drawable/bg_input" android:padding="14dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText android:id="@+id/etPassword"
+        android:hint="Contraseña" android:inputType="textPassword"
+        android:textColor="#FFFFFF" android:textColorHint="#888888"
+        android:background="@drawable/bg_input" android:padding="14dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"/>
+
+    <Button android:id="@+id/btnRegister" android:text="Registrarme"
+        android:backgroundTint="#E53935" android:textColor="#FFFFFF"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView android:id="@+id/tvLogin"
+        android:text="¿Ya tienes cuenta? Inicia sesión"
+        android:textColor="#E53935" android:textSize="14sp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

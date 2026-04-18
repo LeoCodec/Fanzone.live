@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:text="←"
+                android:textColor="#E53935"
+                android:textSize="24sp"
+                android:layout_marginEnd="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Crear Evento"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView android:text="NOMBRE DEL EVENTO" android:textSize="10sp"
+            android:textColor="#888888" android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etTitle"
+            android:hint="Ej: Vemos el partido en casa"
+            android:textColor="#FFFFFF" android:textColorHint="#555555"
+            android:background="@drawable/bg_input" android:padding="14dp"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:text="DEPORTE" android:textSize="10sp"
+            android:textColor="#888888" android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <Spinner android:id="@+id/spinnerSport"
+            android:background="@drawable/bg_input"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:entries="@array/sports_array"/>
+
+        <TextView android:text="PARTIDO" android:textSize="10sp"
+            android:textColor="#888888" android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etMatch"
+            android:hint="Ej: México vs Argentina - Mundial 2026"
+            android:textColor="#FFFFFF" android:textColorHint="#555555"
+            android:background="@drawable/bg_input" android:padding="14dp"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:text="FECHA Y HORA" android:textSize="10sp"
+            android:textColor="#888888" android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etDate"
+            android:hint="Ej: 15 Jun 2026 · 18:00"
+            android:textColor="#FFFFFF" android:textColorHint="#555555"
+            android:background="@drawable/bg_input" android:padding="14dp"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:text="UBICACIÓN (COLONIA)" android:textSize="10sp"
+            android:textColor="#888888" android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etLocation"
+            android:hint="Ej: Col. Roma Norte, CDMX"
+            android:textColor="#FFFFFF" android:textColorHint="#555555"
+            android:background="@drawable/bg_input" android:padding="14dp"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:text="CUPO MÁXIMO" android:textSize="10sp"
+            android:textColor="#888888" android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etMax"
+            android:hint="Ej: 15"
+            android:inputType="number"
+            android:textColor="#FFFFFF" android:textColorHint="#555555"
+            android:background="@drawable/bg_input" android:padding="14dp"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginBottom="32dp"/>
+
+        <Button android:id="@+id/btnCreate"
+            android:text="CREAR EVENTO 🔥"
+            android:textColor="#FFFFFF" android:textStyle="bold"
+            android:backgroundTint="#E53935"
+            android:layout_width="match_parent" android:layout_height="56dp"/>
+    </LinearLayout>
+</ScrollView>
