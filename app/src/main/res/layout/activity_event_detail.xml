@@ -88,6 +88,16 @@
                 android:text="👥 Cupo máximo: 20 personas"
                 android:textSize="14sp"
                 android:textColor="#AAAAAA"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvFee"
+                android:text="🎟️ Aporte: Gratis"
+                android:textSize="14sp"
+                android:textColor="#FF8A80"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -148,6 +158,36 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_margin="16dp"/>
+
+        <TextView
+            android:id="@+id/btnChat"
+            android:text="💬  CHAT DEL EVENTO"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="@drawable/bg_chip_accept"
+            android:paddingTop="16dp" android:paddingBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/btnTicket"
+            android:text="🎟️  MI ENTRADA (QR)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="@drawable/bg_ticket"
+            android:paddingTop="16dp" android:paddingBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 </ScrollView>

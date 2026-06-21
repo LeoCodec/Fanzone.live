@@ -44,7 +44,24 @@
             android:text="Fútbol · Basquet · F1 · UFC · y más"
             android:textSize="12sp"
             android:textColor="#888888"
-            android:layout_marginBottom="48dp"/>
+            android:layout_marginBottom="36dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Hola, fanático!"
+            android:textSize="26sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inicia sesión para encontrar tus encuentros deportivos."
+            android:textSize="13sp"
+            android:textColor="#9A9AA5"
+            android:layout_marginBottom="36dp"/>
 
         <TextView
             android:layout_width="match_parent"

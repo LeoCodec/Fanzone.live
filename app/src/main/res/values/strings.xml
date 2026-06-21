@@ -6,9 +6,12 @@
         <item>Basket</item>
         <item>F1</item>
         <item>Box</item>
-        <item>UFC</item>
+        <item>UFC/MMA</item>
         <item>Béisbol</item>
-        <item>Mundial</item>
+        <item>Jiu-jitsu</item>
+        <item>Hockey</item>
+        <item>Tenis</item>
+        <item>NFL</item>
         <item>Otro</item>
     </string-array>
 </resources>

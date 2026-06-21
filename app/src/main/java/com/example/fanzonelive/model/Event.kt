@@ -1,5 +1,4 @@
 package com.example.fanzonelive.model
-
 data class Event(
     val id: String = "",
     val title: String = "",
@@ -8,7 +7,9 @@ data class Event(
     val location: String = "",
     val hostId: String = "",
     val maxAttendees: Int = 10,
+    val taken: Int = 0,
+    val fee: String = "Gratis",
     val attendees: List<String> = emptyList(),
-    val emoji: String = "⚽",
-    val sport: String = "Fútbol"
+    val emoji: String = "âš½",
+    val sport: String = "FÃºtbol"
 )
