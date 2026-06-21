@@ -6,7 +6,7 @@
     <application
         android:allowBackup="true"
         android:label="FanZone Live"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        android:theme="@style/Theme.Fanzonelive">
 
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
@@ -23,5 +23,7 @@
         <activity android:name=".ui.create.CreateEventActivity"/>
         <activity android:name=".ui.notifications.NotificationsActivity"/>
             <activity android:name=".ui.sport.SportActivity"/>
+        <activity android:name=".ui.chat.ChatActivity"/>
+        <activity android:name=".ui.ticket.TicketActivity"/>
     </application>
 </manifest>

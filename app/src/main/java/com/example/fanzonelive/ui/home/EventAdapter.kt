@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fanzonelive.R
@@ -21,6 +22,7 @@ class EventAdapter(private val events: MutableList<Event>) :
         val tvDate: TextView = view.findViewById(R.id.tvDate)
         val tvLocation: TextView = view.findViewById(R.id.tvLocation)
         val tvCapacity: TextView = view.findViewById(R.id.tvCapacity)
+        val pbCapacity: ProgressBar = view.findViewById(R.id.pbCapacity)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
@@ -37,7 +39,11 @@ class EventAdapter(private val events: MutableList<Event>) :
         holder.tvSport.text = event.sport
         holder.tvDate.text = "📅 ${event.date}"
         holder.tvLocation.text = "📍 ${event.location}"
-        holder.tvCapacity.text = "👥 ${event.maxAttendees}"
+
+        val taken = event.taken.coerceAtMost(event.maxAttendees)
+        holder.tvCapacity.text = "👥 $taken/${event.maxAttendees}"
+        holder.pbCapacity.max = if (event.maxAttendees > 0) event.maxAttendees else 1
+        holder.pbCapacity.progress = taken
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, EventDetailActivity::class.java).apply {
@@ -49,6 +55,7 @@ class EventAdapter(private val events: MutableList<Event>) :
                 putExtra("emoji", event.emoji)
                 putExtra("sport", event.sport)
                 putExtra("hostId", event.hostId)
+                putExtra("fee", event.fee)
                 putExtra("maxAttendees", event.maxAttendees)
             }
             holder.itemView.context.startActivity(intent)

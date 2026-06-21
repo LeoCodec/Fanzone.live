@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.Fanzonelive" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Bridge: permite usar componentes Material (BottomNav, Slider) SIN romper
+         los Button/EditText de AppCompat que ya usan fondos personalizados. -->
+    <style name="Theme.Fanzonelive" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimary">#E53935</item>
+        <item name="colorPrimaryVariant">#B71C1C</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#E53935</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:windowBackground">#0A0A0C</item>
+        <item name="android:statusBarColor">#0A0A0C</item>
+        <item name="android:navigationBarColor">#0A0A0C</item>
+    </style>
 </resources>
