@@ -1,167 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#0A0A0A">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0A0A0A" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center_horizontal"
+        android:paddingStart="30dp" android:paddingEnd="30dp"
+        android:paddingTop="40dp" android:paddingBottom="32dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:padding="32dp">
+        <TextView android:text="&#9917;" android:textSize="56sp" android:gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="FANZONE" android:textSize="34sp" android:textColor="#FFFFFF"
+            android:textStyle="bold" android:letterSpacing="0.2" android:gravity="center"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="LIVE" android:textSize="34sp" android:textColor="#E53935"
+            android:textStyle="bold" android:letterSpacing="0.2" android:gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="Futbol Â· Basket Â· F1 Â· UFC Â· y mas"
+            android:textSize="11sp" android:textColor="#7A7A85" android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="⚽"
-            android:textSize="64sp"
-            android:layout_marginTop="48dp"
-            android:layout_marginBottom="8dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FANZONE"
-            android:textSize="40sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:letterSpacing="0.2"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LIVE"
-            android:textSize="40sp"
-            android:textColor="#E53935"
-            android:textStyle="bold"
-            android:letterSpacing="0.2"
-            android:layout_marginBottom="8dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fútbol · Basquet · F1 · UFC · y más"
-            android:textSize="12sp"
-            android:textColor="#888888"
-            android:layout_marginBottom="36dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¡Hola, fanático!"
-            android:textSize="26sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
+        <TextView android:text="&#161;Hola, fanatico!" android:textSize="22sp"
+            android:textColor="#FFFFFF" android:textStyle="bold"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"/>
+        <TextView android:text="Inicia sesion para encontrar tus encuentros deportivos."
+            android:textSize="12sp" android:textColor="#9A9AA5"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Inicia sesión para encontrar tus encuentros deportivos."
-            android:textSize="13sp"
-            android:textColor="#9A9AA5"
-            android:layout_marginBottom="36dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CORREO"
-            android:textSize="10sp"
-            android:textColor="#888888"
-            android:letterSpacing="0.15"
+        <TextView android:text="CORREO" android:textSize="9sp" android:textColor="#888888"
+            android:letterSpacing="0.15" android:textStyle="bold"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"/>
+        <EditText android:id="@+id/etEmail"
+            android:hint="tu@correo.com" android:textColor="#FFFFFF"
+            android:textColorHint="#5A5A62" android:background="@drawable/bg_input"
+            android:padding="16dp" android:inputType="textEmailAddress"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:layout_marginBottom="16dp"/>
 
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:inputType="textEmailAddress"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#555555"
-            android:hint="tu@correo.com"
-            android:background="@drawable/bg_input"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:layout_marginBottom="20dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CONTRASEÑA"
-            android:textSize="10sp"
-            android:textColor="#888888"
-            android:letterSpacing="0.15"
+        <TextView android:text="CONTRASENA" android:textSize="9sp" android:textColor="#888888"
+            android:letterSpacing="0.15" android:textStyle="bold"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"/>
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
+        <EditText android:id="@+id/etPassword"
+            android:hint="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"
+            android:textColor="#FFFFFF" android:textColorHint="#5A5A62"
+            android:background="@drawable/bg_input" android:padding="16dp"
             android:inputType="textPassword"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#555555"
-            android:hint="••••••••"
-            android:background="@drawable/bg_input"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:layout_marginBottom="32dp"/>
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:layout_marginBottom="26dp"/>
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="ENTRAR AL PARTIDO"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="14sp"
-            android:letterSpacing="0.1"
-            android:background="@drawable/bg_button"
-            android:layout_marginBottom="24dp"/>
+        <Button android:id="@+id/btnLogin" android:text="ENTRAR AL PARTIDO"
+            android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="13sp"
+            android:letterSpacing="0.05" android:background="@drawable/bg_button"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginBottom="22dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+        <TextView android:id="@+id/tvRegister" android:text="Crear cuenta nueva"
+            android:textColor="#E53935" android:textSize="13sp" android:textStyle="bold"
+            android:gravity="center" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="12dp"/>
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#333333"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  ó  "
-                android:textColor="#555555"
-                android:textSize="12sp"/>
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#333333"/>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tvRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Crear cuenta nueva"
-            android:textColor="#E53935"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="32dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🏆  Mundial 2026  🏆"
-            android:textSize="13sp"
-            android:textColor="#444444"/>
-
+        <TextView android:text="&#127942;  Mundial 2026  &#127942;"
+            android:textColor="#3A3A40" android:textSize="12sp" android:gravity="center"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
     </LinearLayout>
 </ScrollView>

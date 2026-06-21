@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bg_dark">#121212</color>
-    <color name="bg_card">#1E1E1E</color>
-    <color name="carmine_red">#E50914</color>
-    <color name="carmine_red_dark">#B20710</color>
-    <color name="text_primary">#F5F5F5</color>
-    <color name="text_secondary">#A0A0A0</color>
-    <color name="glass_overlay">#1AFFFFFF</color>
-    <color name="black">#000000</color>
+    <color name="bg_dark">#0A0A0A</color>
+    <color name="bg_card">#141414</color>
+    <color name="bg_input">#161618</color>
+    <color name="carmine_red">#E53935</color>
+    <color name="carmine_red_dark">#B41D23</color>
+    <color name="border_subtle">#2A2A30</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="text_hint">#5A5A62</color>
+    <color name="colorPrimary">#E53935</color>
+    <color name="colorPrimaryDark">#B41D23</color>
+    <color name="colorAccent">#E53935</color>
     <color name="white">#FFFFFF</color>
-    <color name="colorPrimary">#E50914</color>
-    <color name="colorPrimaryDark">#B20710</color>
-    <color name="colorAccent">#E50914</color>
+    <color name="black">#000000</color>
+    <color name="bg_main">#0A0A0A</color>
+    <color name="red_primary">#E53935</color>
+    <color name="red_dark">#B41D23</color>
 </resources>

@@ -1,96 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/bg_card"
-    android:layout_marginBottom="12dp"
-    android:padding="16dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="10dp">
-
-        <TextView
-            android:id="@+id/tvEmoji"
-            android:text="⚽"
-            android:textSize="32sp"
-            android:layout_marginEnd="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvTitle"
-                android:text="México vs USA"
-                android:textSize="16sp"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/tvMatch"
-                android:text="Mundial 2026"
-                android:textSize="12sp"
-                android:textColor="#AAAAAA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tvSport"
-            android:text="Fútbol"
-            android:textSize="11sp"
-            android:textColor="#FFFFFF"
-            android:background="@drawable/bg_filter_active"
-            android:paddingStart="10dp" android:paddingEnd="10dp"
-            android:paddingTop="4dp" android:paddingBottom="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@drawable/bg_card"
+    android:layout_marginBottom="12dp">
     <View android:layout_width="match_parent" android:layout_height="1dp"
-        android:background="#2A2A2A" android:layout_marginBottom="10dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvDate"
-            android:text="📅 15 Jun · 18:00"
-            android:textSize="12sp"
-            android:textColor="#AAAAAA"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:id="@+id/tvLocation"
-            android:text="📍 Col. Condesa"
-            android:textSize="12sp"
-            android:textColor="#AAAAAA"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:id="@+id/tvCapacity"
-            android:text="👥 20"
-            android:textSize="12sp"
-            android:textColor="#E53935"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:background="#1D1D22"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="15dp" android:layout_marginBottom="0dp">
+        <TextView android:id="@+id/tvEmoji" android:text="&#9917;" android:textSize="30sp"
+            android:layout_marginEnd="12dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tvTitle" android:text="Titulo del evento"
+                android:textSize="15sp" android:textColor="#FFFFFF" android:textStyle="bold"
+                android:maxLines="1" android:ellipsize="end"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvMatch" android:text="Liga Â· Partido"
+                android:textSize="12sp" android:textColor="#AAAAAA"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView android:id="@+id/tvSport" android:text="Futbol"
+            android:textSize="10sp" android:textColor="#FFFFFF" android:textStyle="bold"
+            android:background="#E53935" android:paddingStart="9dp" android:paddingEnd="9dp"
+            android:paddingTop="4dp" android:paddingBottom="4dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
     </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#262626" android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp" android:layout_marginBottom="10dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:paddingStart="15dp" android:paddingEnd="15dp"
+        android:layout_marginBottom="10dp">
+        <TextView android:id="@+id/tvDate" android:text="&#128197; Fecha"
+            android:textSize="11sp" android:textColor="#AAAAAA"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView android:id="@+id/tvLocation" android:text="&#128205; Lugar"
+            android:textSize="11sp" android:textColor="#AAAAAA"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView android:id="@+id/tvCapacity" android:text="&#128101; 0/10"
+            android:textSize="12sp" android:textColor="#E53935" android:textStyle="bold"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/pbCapacity"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/bg_progress_track"
+        android:layout_width="match_parent" android:layout_height="4dp"
+        android:layout_marginStart="15dp" android:layout_marginEnd="15dp"
+        android:layout_marginBottom="14dp"
+        android:max="100" android:progress="60"/>
 </LinearLayout>
