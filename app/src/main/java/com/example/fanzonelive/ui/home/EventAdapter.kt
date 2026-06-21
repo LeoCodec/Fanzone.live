@@ -47,6 +47,8 @@ class EventAdapter(private val events: MutableList<Event>) :
                 putExtra("date", event.date)
                 putExtra("location", event.location)
                 putExtra("emoji", event.emoji)
+                putExtra("sport", event.sport)
+                putExtra("hostId", event.hostId)
                 putExtra("maxAttendees", event.maxAttendees)
             }
             holder.itemView.context.startActivity(intent)

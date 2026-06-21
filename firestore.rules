@@ -1,0 +1,43 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------- EVENTOS ----------
+    match /events/{eventId} {
+      // Cualquier usuario autenticado puede ver los eventos
+      allow read: if request.auth != null;
+
+      // Solo se crea si el usuario está autenticado y se registra como su propio anfitrión
+      allow create: if request.auth != null
+                    && request.resource.data.hostId == request.auth.uid;
+
+      // Solo el anfitrión dueño puede actualizar o borrar su evento
+      allow update, delete: if request.auth != null
+                            && resource.data.hostId == request.auth.uid;
+    }
+
+    // ---------- SOLICITUDES ----------
+    match /requests/{requestId} {
+      // La lee el solicitante o el anfitrión del evento
+      allow read: if request.auth != null
+                  && (resource.data.userId == request.auth.uid
+                      || resource.data.hostId == request.auth.uid);
+
+      // El usuario crea su propia solicitud
+      allow create: if request.auth != null
+                    && request.resource.data.userId == request.auth.uid;
+
+      // Solo el anfitrión puede aceptar/rechazar (cambiar el status)
+      allow update: if request.auth != null
+                    && resource.data.hostId == request.auth.uid;
+
+      allow delete: if request.auth != null
+                    && resource.data.userId == request.auth.uid;
+    }
+
+    // Todo lo demás queda bloqueado por defecto
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

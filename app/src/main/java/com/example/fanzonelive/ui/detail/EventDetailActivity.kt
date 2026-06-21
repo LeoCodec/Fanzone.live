@@ -23,6 +23,7 @@ class EventDetailActivity : AppCompatActivity() {
         val date = intent.getStringExtra("date") ?: ""
         val location = intent.getStringExtra("location") ?: ""
         val emoji = intent.getStringExtra("emoji") ?: "⚽"
+        val hostId = intent.getStringExtra("hostId") ?: ""
         val maxAttendees = intent.getIntExtra("maxAttendees", 10)
 
         binding.tvEmoji.text = emoji
@@ -34,11 +35,21 @@ class EventDetailActivity : AppCompatActivity() {
 
         binding.btnBack.setOnClickListener { finish() }
 
+        val uid = auth.currentUser?.uid
+        // El anfitrión no se solicita a sí mismo
+        if (uid != null && uid == hostId) {
+            binding.btnJoin.isEnabled = false
+            binding.btnJoin.text = "ERES EL ANFITRIÓN 🎙️"
+        }
+
         binding.btnJoin.setOnClickListener {
-            val uid = auth.currentUser?.uid ?: return@setOnClickListener
+            val userId = auth.currentUser?.uid ?: return@setOnClickListener
             val request = hashMapOf(
-                "userId" to uid,
+                "userId" to userId,
+                "userEmail" to (auth.currentUser?.email ?: ""),
                 "eventId" to eventId,
+                "eventTitle" to title,
+                "hostId" to hostId,
                 "status" to "pending",
                 "timestamp" to System.currentTimeMillis()
             )
@@ -46,7 +57,7 @@ class EventDetailActivity : AppCompatActivity() {
                 .addOnSuccessListener {
                     Toast.makeText(this, "Solicitud enviada al anfitrión ✅", Toast.LENGTH_SHORT).show()
                     binding.btnJoin.isEnabled = false
-                    binding.btnJoin.text = "Solicitud enviada"
+                    binding.btnJoin.text = "SOLICITUD ENVIADA"
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, "Error al enviar solicitud", Toast.LENGTH_SHORT).show()

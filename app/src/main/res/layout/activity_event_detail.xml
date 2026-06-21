@@ -13,7 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="#E53935"
+            android:background="@drawable/bg_header_gradient"
             android:orientation="vertical"
             android:gravity="center"
             android:padding="20dp">
@@ -144,7 +144,7 @@
             android:text="SOLICITAR UNIRSE"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:backgroundTint="#E53935"
+            android:background="@drawable/bg_button"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_margin="16dp"/>
